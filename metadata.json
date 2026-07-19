@@ -1,0 +1,6 @@
+{
+  "name": "Landing Page",
+  "description": "A modern, responsive landing page with a hero section and features.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
