@@ -1,5 +1,7 @@
 import React from 'react';
 import { Phone, MessageCircle, Instagram } from 'lucide-react';
+
+// Background Assets
 import bgMobile from './photo_5974136373453196801_y.jpg';
 import bgDesktop from './hero_for_tint.jpeg';
 
