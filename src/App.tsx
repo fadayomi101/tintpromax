@@ -18,13 +18,13 @@ const GlowButton = ({ icon: Icon, text, href }: { icon: any, text: string, href:
   return (
     <a 
       href={href}
-      className="relative flex items-center p-1.5 md:p-2 pr-8 md:pr-10 gap-4 md:gap-6 rounded-[50px] bg-[#1a1a1c]/40 backdrop-blur-[24px] hover:bg-[#27272a]/50 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 cursor-pointer group w-[85%] max-w-[280px] md:max-w-[340px] md:w-auto md:min-w-[280px] shadow-[0_12px_40px_rgba(0,0,0,0.8)] mx-auto md:mx-0 overflow-hidden border-[3px] border-white/30"
+      className="relative flex items-center p-1.5 pr-6 md:pr-8 gap-3 md:gap-5 rounded-[50px] bg-[#1a1a1c]/40 backdrop-blur-[24px] hover:bg-[#27272a]/50 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 cursor-pointer group w-[80%] max-w-[240px] md:max-w-[280px] md:w-auto md:min-w-[240px] shadow-[0_12px_40px_rgba(0,0,0,0.8)] mx-auto md:mx-0 overflow-hidden border-[2px] md:border-[3px] border-white/30"
     >
       {/* 3D glass edge effects */}
       <div className="absolute inset-0 rounded-[50px] pointer-events-none shadow-[inset_0_2px_3px_rgba(255,255,255,0.2),inset_0_-2px_4px_rgba(0,0,0,0.6)]" />
 
       {/* Icon Circle Container */}
-      <div className="relative flex items-center justify-center w-[56px] h-[56px] md:w-[72px] md:h-[72px] rounded-full shrink-0 ml-1 shadow-[0_0_20px_rgba(0,0,0,0.5)] overflow-hidden bg-black">
+      <div className="relative flex items-center justify-center w-[48px] h-[48px] md:w-[60px] md:h-[60px] rounded-full shrink-0 ml-1 shadow-[0_0_20px_rgba(0,0,0,0.5)] overflow-hidden bg-black">
         
         {/* Glow - blurred ring 1 (Warm) */}
         <div 
@@ -53,12 +53,12 @@ const GlowButton = ({ icon: Icon, text, href }: { icon: any, text: string, href:
         
         {/* Base Black Ring (Center cut out) */}
         <div className="absolute inset-[3px] rounded-full bg-gradient-to-b from-[#404044] to-[#121214] flex items-center justify-center shadow-[inset_0_2px_4px_rgba(255,255,255,0.4),inset_0_-2px_6px_rgba(0,0,0,0.8),0_4px_12px_rgba(0,0,0,1)] z-10">
-          <Icon className="w-6 h-6 md:w-8 md:h-8 text-[#ffffff] drop-shadow-[0_2px_5px_rgba(0,0,0,0.9)] opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300" strokeWidth={2.5} />
+          <Icon className="w-5 h-5 md:w-6 md:h-6 text-[#ffffff] drop-shadow-[0_2px_5px_rgba(0,0,0,0.9)] opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300" strokeWidth={2.5} />
         </div>
       </div>
 
       {/* Text */}
-      <span className="text-[#ffffff] font-semibold text-[18px] md:text-[22px] tracking-wide whitespace-nowrap z-10 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] opacity-95 group-hover:opacity-100 transition-opacity">
+      <span className="text-[#ffffff] font-semibold text-[15px] md:text-[18px] tracking-wide whitespace-nowrap z-10 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] opacity-95 group-hover:opacity-100 transition-opacity">
         {text}
       </span>
     </a>
@@ -86,7 +86,7 @@ export default function App() {
       <div className="relative z-10 w-full min-h-screen flex flex-col items-center pt-[15vh] pb-12 px-4 justify-center md:justify-start md:pt-[30vh]">
 
         {/* Heading */}
-        <h2 className="absolute top-[10vh] md:static font-sora text-[12px] font-medium text-center text-white/90 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] md:mb-8 max-w-xl px-4 tracking-wide w-full left-1/2 -translate-x-1/2 md:translate-x-0 md:left-auto uppercase leading-loose md:leading-normal z-20">
+        <h2 className="absolute top-[10vh] md:static font-sora text-[10px] md:text-[11px] font-medium text-center text-white/90 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] md:mb-8 max-w-xl px-4 tracking-wide w-full left-1/2 -translate-x-1/2 md:translate-x-0 md:left-auto uppercase italic leading-normal md:leading-tight z-20">
           <ColorDot />Best car tinting expert in lagos , ppf  , vinyl wrap and more....
         </h2>
 
