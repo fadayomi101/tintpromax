@@ -1,30 +1,19 @@
 import React from 'react';
 import { Phone, MessageCircle, Instagram } from 'lucide-react';
+import bgMobile from './photo_5974136373453196801_y.jpg';
+import bgDesktop from './hero_for_tint.jpeg';
 
 const ColorDot = () => (
-  <div className="relative w-4 h-4 rounded-full bg-black overflow-hidden shrink-0 shadow-[0_0_10px_rgba(0,0,0,0.5)]">
-    <div 
-      className="absolute w-[150%] h-[150%] rounded-full blur-[4px] opacity-100 animate-flow1 mix-blend-screen" 
+  <span className="relative inline-block w-4 h-4 rounded-full shrink-0 mx-1.5 align-middle shadow-[0_2px_4px_rgba(0,0,0,0.8)]" style={{ transform: 'translateY(-1px)' }}>
+    <span className="absolute inset-0 rounded-full animate-pulse-color" />
+    <span 
+      className="absolute inset-0 rounded-full pointer-events-none" 
       style={{ 
-        background: 'radial-gradient(circle, rgba(255, 0, 60, 1) 0%, transparent 60%)',
-        left: '-20%', top: '-20%'
+        background: 'radial-gradient(circle at 35% 35%, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0) 40%, rgba(0,0,0,0.6) 100%)',
+        boxShadow: 'inset -2px -2px 4px rgba(0,0,0,0.8), inset 2px 2px 4px rgba(255,255,255,0.8)'
       }} 
     />
-    <div 
-      className="absolute w-[150%] h-[150%] rounded-full blur-[4px] opacity-100 animate-flow2 mix-blend-screen" 
-      style={{ 
-        background: 'radial-gradient(circle, rgba(0, 80, 255, 1) 0%, transparent 60%)',
-        right: '-20%', bottom: '-20%'
-      }} 
-    />
-    <div 
-      className="absolute w-[120%] h-[120%] rounded-full blur-[4px] opacity-100 animate-flow3 mix-blend-screen" 
-      style={{ 
-        background: 'radial-gradient(circle, rgba(255, 180, 0, 1) 0%, transparent 60%)',
-        left: '20%', bottom: '-10%'
-      }} 
-    />
-  </div>
+  </span>
 );
 
 const GlowButton = ({ icon: Icon, text, href }: { icon: any, text: string, href: string }) => {
@@ -82,16 +71,16 @@ export default function App() {
   return (
     <div className="relative min-h-screen bg-black text-white font-sans overflow-x-hidden">
       {/* Background Images */}
-      <div className="absolute inset-0 z-0 bg-black pointer-events-none">
+      <div className="fixed inset-0 z-0 bg-black pointer-events-none overflow-hidden">
         {/* Mobile Background */}
         <div 
-          className="absolute inset-0 md:hidden bg-cover bg-center"
-          style={{ backgroundImage: "url('/photo_5974136373453196801_y.jpg')" }}
+          className="absolute inset-0 md:hidden bg-cover bg-center bg-no-repeat animate-zoom-in-out"
+          style={{ backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%), url(${bgMobile})` }}
         />
         {/* Desktop Background */}
         <div 
-          className="hidden md:block absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundColor: "black", backgroundImage: "linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.3) 30%, rgba(0,0,0,0.3) 100%), url('/hero_for_tint.jpeg')" }}
+          className="hidden md:block absolute inset-0 bg-cover bg-center bg-no-repeat animate-zoom-in-out"
+          style={{ backgroundColor: "black", backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.3) 30%, rgba(0,0,0,0.3) 100%), url(${bgDesktop})` }}
         />
       </div>
 
@@ -99,9 +88,8 @@ export default function App() {
       <div className="relative z-10 w-full min-h-screen flex flex-col items-center pt-[15vh] pb-12 px-4 justify-center md:justify-start md:pt-[30vh]">
 
         {/* Heading */}
-        <h2 className="absolute top-[10vh] md:static font-sora text-[12px] font-medium text-center text-white/90 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] md:mb-8 max-w-xl px-4 tracking-wide w-full left-1/2 -translate-x-1/2 md:translate-x-0 md:left-auto flex items-center justify-center gap-2">
-          <ColorDot />
-          <span className="uppercase">Best car tinting expert in lagos , ppf  , vinyl wrap and more....</span>
+        <h2 className="absolute top-[10vh] md:static font-sora text-[12px] font-medium text-center text-white/90 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] md:mb-8 max-w-xl px-4 tracking-wide w-full left-1/2 -translate-x-1/2 md:translate-x-0 md:left-auto uppercase leading-loose md:leading-normal z-20">
+          <ColorDot />Best car tinting expert in lagos , ppf  , vinyl wrap and more....
         </h2>
 
         {/* Buttons Row */}
