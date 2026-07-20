@@ -1,10 +1,6 @@
 import React from 'react';
 import { Phone, MessageCircle, Instagram } from 'lucide-react';
 
-// Background Assets
-import bgMobile from './photo_5974136373453196801_y.jpg';
-import bgDesktop from './hero_for_tint.jpeg';
-
 const ColorDot = () => (
   <span className="relative inline-block w-4 h-4 rounded-full shrink-0 mx-1.5 align-middle shadow-[0_2px_4px_rgba(0,0,0,0.8)]" style={{ transform: 'translateY(-1px)' }}>
     <span className="absolute inset-0 rounded-full animate-pulse-color" />
@@ -76,12 +72,12 @@ export default function App() {
       <div className="fixed inset-0 z-0 bg-black pointer-events-none overflow-hidden">
         {/* Mobile Background */}
         <div className="absolute inset-0 md:hidden animate-zoom-in-out">
-          <img src={bgMobile} alt="Background" className="absolute inset-0 w-full h-full object-cover object-center" />
+          <img src="/photo_5974136373453196801_y.jpg" alt="Background" className="absolute inset-0 w-full h-full object-cover object-center" />
           <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/70" />
         </div>
         {/* Desktop Background */}
         <div className="hidden md:block absolute inset-0 animate-zoom-in-out bg-black">
-          <img src={bgDesktop} alt="Background" className="absolute inset-0 w-full h-full object-cover object-center" />
+          <img src="/hero for tint.jpeg" alt="Background" className="absolute inset-0 w-full h-full object-cover object-center" />
           <div className="absolute inset-0 bg-gradient-to-b from-black via-black/30 to-black/30 from-[0%] via-[30%] to-[100%]" />
         </div>
       </div>
