@@ -73,15 +73,15 @@ export default function App() {
       {/* Background Images */}
       <div className="fixed inset-0 z-0 bg-black pointer-events-none overflow-hidden">
         {/* Mobile Background */}
-        <div 
-          className="absolute inset-0 md:hidden bg-cover bg-center bg-no-repeat animate-zoom-in-out"
-          style={{ backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%), url(${bgMobile})` }}
-        />
+        <div className="absolute inset-0 md:hidden animate-zoom-in-out">
+          <img src={bgMobile} alt="Background" className="absolute inset-0 w-full h-full object-cover object-center" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/70" />
+        </div>
         {/* Desktop Background */}
-        <div 
-          className="hidden md:block absolute inset-0 bg-cover bg-center bg-no-repeat animate-zoom-in-out"
-          style={{ backgroundColor: "black", backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.3) 30%, rgba(0,0,0,0.3) 100%), url(${bgDesktop})` }}
-        />
+        <div className="hidden md:block absolute inset-0 animate-zoom-in-out bg-black">
+          <img src={bgDesktop} alt="Background" className="absolute inset-0 w-full h-full object-cover object-center" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black via-black/30 to-black/30 from-[0%] via-[30%] to-[100%]" />
+        </div>
       </div>
 
       {/* Main Content Overlay */}
